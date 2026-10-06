@@ -127,6 +127,9 @@ em { font-style: italic; }
 .film video { width: 100%; background: #000; }
 
 /* Inhaltsverzeichnis wie im Lehrbuch: Nummer, Titel, Leerpunkte, Zahl */
+.stufen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; margin-bottom: 44px; }
+.stufen > div { margin-bottom: 30px; }
+.stufen.lektionen { grid-template-columns: minmax(0, 1fr); }
 .verz-paar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; margin-bottom: 44px; }
 .verz-titel { font: 600 .76rem/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--sanft); margin: 0 0 6px; padding-bottom: 8px; border-bottom: 1px solid var(--tinte); }
 .verz { list-style: none; margin: 0; padding: 0; }
@@ -208,7 +211,7 @@ details p { color: var(--sanft); font-size: 1rem; line-height: 1.6; padding-bott
   .drei .abb, .abb-paar .abb { max-width: 300px; }
   .film { grid-template-columns: 1fr; gap: 28px 0; }
   .film figure { max-width: 260px; }
-  .verz-paar { grid-template-columns: 1fr; gap: 36px 0; }
+  .verz-paar, .stufen { grid-template-columns: 1fr; gap: 0; }
   .abschnitt { padding: 38px 0 54px; }
 }
 @media (max-width: 640px) {
